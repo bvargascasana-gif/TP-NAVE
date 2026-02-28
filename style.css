@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+:root{
+    --color-principal:rgb(252,251,255);
+    --color-primario-100: rgb(255,255,255);
+    --color-barra: #BEBEBE;
+    --color-btn-primary: white;
+    --color-btn-secondary: rgb(106,49,224);
+    --background-color-hover: #e4d7ff;
+    --color-hover:#360c72;
+    --color-caja-items: #6a6a6a;
+    --color-cobro:#2b2b2b;
+}
+/* ------------------------------------ elementos */
+body{
+    background-color: var(--color-principal);
+    height: 100%px;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    height: 83px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primario-100);
+    width: 100%;
+    border-bottom: 1px solid #e7eaed;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li:hover{
+    cursor: pointer;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    font-weight: 600;
+}
+
+a{
+    text-decoration: none;
+}
+
+h4{
+    font-size: 16px;
+    color: #2b2b2b;
+    font-weight: 700;
+}
+/* ------------------------------------ header*/
+.content-container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 2000px;
+    width: 100%;
+}
+
+.header__logo-container{
+    cursor: pointer;
+    display: none;
+}
+
+.header__logo{
+    cursor: pointer;
+}
+
+.header__btn-menu{
+    display: none;
+}
+
+.header__btn-menu{
+    cursor: pointer;
+}
+
+.header__nav-list{
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    padding: 15px;
+    font-size: 14px;
+    gap: 25px;
+    align-items: center;
+    display: flex;
+}
+
+.header__nav-item{
+    padding: 6px 10px;
+    font-weight: 700;
+}
+
+.header__nav-item:hover{
+    background-color: var(--background-color-hover);
+    color:var(--color-hover)
+}
+
+.linea{
+    width: 2px;
+    height: 24px;
+    background-color:var(--color-barra);
+}
+
+.header__btns{
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    padding: 15px;
+    font-size: 14px;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-primary{
+    border: none;
+    background-color: var(--color-btn-primary);
+    padding: 6px 24px;
+    border-radius: 100px;
+    color: var(--color-btn-secondary);
+    border: 1px solid var(--color-btn-secondary);
+}
+
+.btn-primary:hover{
+    background-color: var(--background-color-hover);
+    color: var(--color-hover);
+}
+
+.btn-secondary{
+    border: none;
+    background-color:var(--color-btn-secondary);
+    padding: 6px 24px;
+    border-radius: 100px;
+    color: var(--color-btn-primary);
+    border: 1px solid transparent;
+}
+
+.btn-secondary:hover{
+    background-color: var(--background-color-hover);
+    color: var(--color-hover);
+    border: 1px solid var(--color-btn-secondary);
+}
+
+.container-tittle{
+    display: flex;
+    justify-content: center;
+}
+/* ------------------------------------ titulo*/
+.title__center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 40px;
+    text-align: center;
+}
+/* ------------------------------------ separador*/
+.separador{
+    height: 30px;
+}
+/* ------------------------------------ cards*/
+.super-padre{
+    max-width: 1022px;
+    width: 100%;
+    margin-inline: auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.padre{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    position: relative;
+    width: 100%;
+    padding-top: 10px;
+}
+.hijo{
+    background: var(--color-btn-primary);
+    min-height: 280px;
+    width: 302px;
+    max-width: 100%;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 25px;
+}
+
+.caja-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 19px;
+    width: 62px;
+    height: 62px;
+    background: var(--background-color-hover);
+    border-radius: 8px;
+    color: var(--color-hover);
+    font-size: 25px;
+}
+
+.caja-item-texto{
+    font-size: 18px;
+    color: var(--color-cobro);
+}
+
+.text-box{
+    font-size: 24px;
+}
+/* ------------------------------------ boton largo*/
+.contenedor-btn-large{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.btn-large{
+    background: var(--background-color-hover);
+    border-radius: 30px;
+    width: 100%;
+    display: flex;
+    gap: 24px;
+    justify-content:space-between;
+    align-items: center;
+    position: relative;
+    padding: 32px 40px;
+}
+
+.content-tex{
+    display: flex;
+    flex-direction: column;
+    color: var(--color-hover);
+    gap: 16px;
+}
+
+.title__btn-large{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.description__btn-large{
+    font-size: 18px;
+}
+
+.btn-inside-btn{
+    border-radius: 25px;
+    border: none;
+    min-width: 220px; 
+    min-height: 52px;
+    display: flex;
+    padding: 10px 32px;
+    color: var(--color-btn-secondary);
+    background-color: var(--color-primario-100);
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.btn-inside-btn:hover{
+    background-color: var(--color-cobro);
+    color: var(--background-color-hover);
+    cursor: pointer;
+}
+/* ------------------------------------ cards cobro-terminal-link-tienda-*/
+.content-btn-cobro{
+    display: flex;
+    justify-content: center;
+    max-width: 1022px;
+    width: 100%;
+    margin-inline: auto; 
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: stretch;
+}
+
+.btn-cobro{
+    background: var(--color-btn-primary);
+    border-radius: 30px;
+    display: flex;
+    gap: 24px;
+    justify-content:space-between;
+    align-items: center;
+    position: relative;
+    padding: 32px 30px;
+}
+
+.cobro-container{
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-cobro{
+    font-size: 18px;
+    color:var(--color-cobro)
+}
+
+.link-cobro{
+    padding-top: 50px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: var(--color-hover);
+}
+
+.conocer-más{
+    color: var(--color-hover);
+}
+
+.bi-chevron-right{
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.img-cobro{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.img-cobro-item{
+    width: 100%;
+    max-width: 475px;
+}
+.content-btn-terminal{
+    display: flex;
+    justify-content: center;
+    max-width: 1022px;
+    width: 100%;
+    margin-inline: auto; 
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: stretch;
+}
+
+.btn-terminal{
+    background: var(--color-btn-primary);
+    border-radius: 30px;
+    display: flex;
+    gap: 24px;
+    justify-content:space-between;
+    align-items: center;
+    position: relative;
+    padding: 32px 30px;
+    flex-direction: row-reverse;
+}
+
+.terminal-container{
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-terminal{
+    font-size: 18px;
+    color:var(--color-cobro)
+}
+
+.link-terminal{
+    padding-top: 50px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: var(--color-hover);
+}
+
+.img-terminal{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.img-terminal-item{
+    width: 100%;
+    max-width: 475px;
+}
+
+.content-btn-link-pago{
+    display: flex;
+    justify-content: center;
+    max-width: 1022px;
+    width: 100%;
+    margin-inline: auto; 
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: stretch;
+}
+
+.btn-link-pago{
+    background: var(--color-btn-primary);
+    border-radius: 30px;
+    display: flex;
+    gap: 24px;
+    justify-content:space-between;
+    align-items: center;
+    position: relative;
+    padding: 32px 30px;
+}
+
+.link-pago-container{
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-link-pago{
+    font-size: 18px;
+    color:var(--color-cobro)
+}
+
+.link-link-pago{
+    padding-top: 50px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: var(--color-hover);
+}
+
+.img-link-pago{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.img-link-pago-item{
+    width: 100%;
+    max-width: 475px;
+}
+
+.content-btn-tienda{
+    display: flex;
+    justify-content: center;
+    max-width: 1022px;
+    width: 100%;
+    margin-inline: auto; 
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: stretch;
+}
+
+.btn-tienda{
+    background: var(--color-btn-primary);
+    border-radius: 30px;
+    display: flex;
+    gap: 24px;
+    justify-content:space-between;
+    align-items: center;
+    position: relative;
+    padding: 32px 30px;
+    flex-direction: row-reverse;
+}
+
+.tienda-container{
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-tienda{
+    font-size: 18px;
+    color:var(--color-cobro)
+}
+
+.link-tienda{
+    padding-top: 50px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: var(--color-hover);
+}
+
+.img-tienda{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.img-tienda-item{
+    width: 100%;
+    max-width: 475px;
+}
+/* ------------------------------------ footer*/
+.footer{
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-primario-100);
+}
+
+.footer__container{
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.footer__text{
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-cobro);
+    gap: 80px;
+}
+.footer-col{
+    min-width: 160px;
+}
+
+.footer__list{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer__a{
+    color: var(--color-cobro);
+}
+
+/* ------------------------------------ media query*/
+@media screen and (max-width: 990px) {
+    .header__logo-container{
+        display: flex;
+    }
+    .header__btn-menu{
+    display: flex;
+    padding-left: 40px;
+    }
+    nav{
+        display: none;
+    }
+    .header__logo{
+        display: none;
+    }
+    .title__center{
+        font-size: 30px;
+    }
+    .caja-item-texto{
+        font-size: 16px;
+    }
+    .text-box{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .padre{
+        flex-direction:column;
+        max-width: 100%;
+        padding: 24px;
+    }
+    .hijo{
+        max-width: 100%;
+        width: 711px;
+        min-height: 250px;
+    }
+    .btn-large{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .btn-inside-btn{
+        width: 100%;
+    }
+    .title__btn-large{
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .btn-cobro{
+        flex-direction: column-reverse;
+    }
+    .img-cobro{
+        width: 100%;
+        display: flex;
+    }
+    .btn-terminal{
+        flex-direction: column-reverse;
+    }
+    .img-terminal{
+        width: 100%;
+        display: flex;
+    }
+    .btn-link-pago{
+        flex-direction: column-reverse;
+    }
+    .img-link-pago{
+        width: 100%;
+        display: flex;
+    }
+    .btn-tienda{
+        flex-direction: column-reverse;
+    }
+    .img-tienda{
+        width: 100%;
+        display: flex;
+    }
+    .footer{
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px; /* espacio vertical entre bloques */
+    }
+    .footer__container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .footer__text{
+        display: flex;
+        justify-content: space-between;
+        gap: 80px; /* espacio horizontal entre columnas */
+    }
+    .footer-col h4 {
+        padding-bottom: 15px;
+    }
+    .footer-col ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* espacio entre items */
+    }
+}
